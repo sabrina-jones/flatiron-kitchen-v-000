@@ -17,14 +17,14 @@ class IngredientsController < ApplicationController
     ingredient.update(ingredient_params)
     redirect_to ingredients_path
   end
-  
+
   def create
     Ingredient.create(ingredient_params)
     redirect_to ingredients_path
   end
 
 
-  private 
+  private
 
   def ingredient_params
     params.require(:ingredient).permit(:name)
